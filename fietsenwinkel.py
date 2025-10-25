@@ -41,17 +41,17 @@ while True:
             aantal = int(input(f"Hoeveel {artikel} wil je kopen? "))
             if aantal <= voorraad[artikel]:
                 voorraad[artikel] -= aantal
-                print(f"✓ Je hebt {aantal} {artikel} gekocht!")
+                print(f"Je hebt {aantal} {artikel} gekocht!")
                 print(f"  Er zijn nog {voorraad[artikel]} stuks op voorraad.")
             else:
-                print(f"✗ Sorry, we hebben maar {voorraad[artikel]} stuks op voorraad.")
+                print(f"Sorry, we hebben maar {voorraad[artikel]} stuks op voorraad.")
         else:
-            print(f"✗ Sorry, {artikel} is niet op voorraad!")
+            print(f"Sorry, {artikel} is niet op voorraad!")
     
     elif keuze == "3":
         print("\n--- HUIDIGE VOORRAAD ---")
         for item, aantal in voorraad.items():
-            status = "✓ Op voorraad" if aantal > 0 else "✗ NIET OP VOORRAAD"
+            status = "Op voorraad" if aantal > 0 else "NIET OP VOORRAAD"
             print(f"• {item}: {aantal} stuks - {status}")
     
     elif keuze == "4":
@@ -60,5 +60,5 @@ while True:
         break
     
     else:
-        print("✗ Ongeldige keuze. Kies 1, 2, 3 of 4.")
+        print("Ongeldige keuze. Kies 1, 2, 3 of 4.")
 

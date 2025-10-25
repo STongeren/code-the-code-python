@@ -50,11 +50,11 @@ while True:
             if 1 <= nummer <= len(wasberen_aanbod):
                 gekozen_wasbeer = wasberen_aanbod[nummer - 1]
                 winkelwagen.append(gekozen_wasbeer)
-                print(f"✓ {gekozen_wasbeer.capitalize()} is toegevoegd aan je winkelwagen!")
+                print(f"{gekozen_wasbeer.capitalize()} is toegevoegd aan je winkelwagen!")
             else:
-                print("✗ Ongeldig nummer!")
+                print("Ongeldig nummer!")
         except ValueError:
-            print("✗ Voer een geldig nummer in!")
+            print("Voer een geldig nummer in!")
     
     elif keuze == "3":
         print("\n--- JOUW WINKELWAGEN ---")
@@ -80,11 +80,11 @@ while True:
                 nummer = int(input("\nWelk item wil je verwijderen? (nummer): "))
                 if 1 <= nummer <= len(winkelwagen):
                     verwijderd = winkelwagen.pop(nummer - 1)
-                    print(f"✓ {verwijderd.capitalize()} is verwijderd uit je winkelwagen.")
+                    print(f"{verwijderd.capitalize()} is verwijderd uit je winkelwagen.")
                 else:
-                    print("✗ Ongeldig nummer!")
+                    print("Ongeldig nummer!")
             except ValueError:
-                print("✗ Voer een geldig nummer in!")
+                print("Voer een geldig nummer in!")
     
     elif keuze == "5":
         print("\n" + "=" * 60)
@@ -103,7 +103,7 @@ while True:
             
             print(f"\n--- TOTAAL: €{totaal:.2f} ---")
             print(f"\nJe hebt {len(winkelwagen)} wasberen gekocht!")
-            print("\nBedankt voor je bestelling bij De Grote Wasberenwinkel! 🦝")
+            print("\nBedankt voor je bestelling bij De Grote Wasberenwinkel!")
         
         break
     
@@ -121,8 +121,8 @@ while True:
             aantal = winkelwagen.count(wasbeer_naam)
             print(f"\n'{wasbeer_naam.capitalize()}' zit {aantal} keer in je winkelwagen.")
         else:
-            print(f"✗ '{wasbeer_naam}' staat niet in ons aanbod.")
+            print(f"'{wasbeer_naam}' staat niet in ons aanbod.")
     
     else:
-        print("✗ Ongeldige keuze. Kies tussen 1 en 7.")
+        print("Ongeldige keuze. Kies tussen 1 en 7.")
 

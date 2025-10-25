@@ -26,14 +26,14 @@ while True:
             
             if 0 <= gebouw < 3 and 0 <= verdieping < 3 and 0 <= kamer < 5:
                 if hotel[gebouw][verdieping][kamer]:
-                    print(f"✗ Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1} is al bezet!")
+                    print(f"Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1} is al bezet!")
                 else:
                     hotel[gebouw][verdieping][kamer] = True
-                    print(f"✓ Inchecken geslaagd! Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1}.")
+                    print(f"Inchecken geslaagd! Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1}.")
             else:
-                print("✗ Ongeldige kamer, verdieping of gebouw!")
+                print("Ongeldige kamer, verdieping of gebouw!")
         except ValueError:
-            print("✗ Voer geldige nummers in!")
+            print("Voer geldige nummers in!")
     
     elif keuze == "2":
         print("\n--- OVERZICHT VAN ALLE KAMERS ---")
@@ -48,12 +48,10 @@ while True:
                 print(f"\n  Verdieping {v+1}:")
                 kamer_status = ""
                 for k in range(5):
-                    status = "🔴" if hotel[g][v][k] else "🟢"
-                    kamer_status += f"  Kamer {k+1}: {status}"
+                    status = "BEZET" if hotel[g][v][k] else "VRIJ"
+                    kamer_status += f"  Kamer {k+1}: {status}  "
                 print(kamer_status)
             print()
-        
-        print("\nLegenda: 🟢 = Vrij | 🔴 = Bezet")
         
         totaal_kamers = 3 * 3 * 5
         bezette_kamers = sum(sum(sum(verdieping) for verdieping in gebouw) for gebouw in hotel)
@@ -73,20 +71,20 @@ while True:
             
             if 0 <= gebouw < 3 and 0 <= verdieping < 3 and 0 <= kamer < 5:
                 if not hotel[gebouw][verdieping][kamer]:
-                    print(f"✗ Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1} is al leeg!")
+                    print(f"Kamer {kamer+1} op verdieping {verdieping+1} in gebouw {gebouw+1} is al leeg!")
                 else:
                     hotel[gebouw][verdieping][kamer] = False
-                    print(f"✓ Uitchecken geslaagd! Kamer {kamer+1} is nu beschikbaar.")
+                    print(f"Uitchecken geslaagd! Kamer {kamer+1} is nu beschikbaar.")
             else:
-                print("✗ Ongeldige kamer, verdieping of gebouw!")
+                print("Ongeldige kamer, verdieping of gebouw!")
         except ValueError:
-            print("✗ Voer geldige nummers in!")
+            print("Voer geldige nummers in!")
     
     elif keuze == "4":
-        print("\nBedankt voor je bezoek aan Het Vage Hotel! 🏨")
+        print("\nBedankt voor je bezoek aan Het Vage Hotel!")
         print("Tot ziens!")
         break
     
     else:
-        print("✗ Ongeldige keuze. Kies tussen 1 en 4.")
+        print("Ongeldige keuze. Kies tussen 1 en 4.")
 

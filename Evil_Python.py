@@ -9,7 +9,7 @@ try:
     SCREENSHOT_AVAILABLE = True
 except ImportError:
     SCREENSHOT_AVAILABLE = False
-    print("Screenshot libraries niet gevonden. Installeer met: pip install pillow pyautogui")
+    print("Screenshot libraries niet gevonden. ")
 
 
 def verzamel_os_informatie():
@@ -106,7 +106,6 @@ def toon_verzamelde_data(os_info):
 def verstuur_data_email(os_info, screenshot_pad):
     print("\nEmail functionaliteit (nog niet geïmplementeerd)")
     print("   Tip: Gebruik 'smtplib' en 'email' modules voor email verzending")
-    print("   Voorbeeld: https://docs.python.org/3/library/smtplib.html")
 
 
 def main():

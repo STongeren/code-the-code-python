@@ -56,7 +56,7 @@ while True:
     
     elif keuze == "4":
         print("\nBedankt voor je bezoek aan De Snelle Trappers!")
-        print("Tot ziens! 🚴")
+        print("Tot ziens! ")
         break
     
     else:

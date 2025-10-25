@@ -59,6 +59,6 @@ drankje_nummer = int(drankje_keuze)
 gekozen_drankje = drankjes[drankje_nummer - 1].split(". ", 1)[1]  
 
 
-print(f"\n🚀 BESTELLING BEVESTIGD! 🚀")
+print(f"\n BESTELLING BEVESTIGD! ")
 print(f"Gerecht: {gekozen_gerecht} | Topping: {gekozen_topping} | Drankje: {gekozen_drankje}")
 print("Bedankt voor je bestelling bij De Galactische Foodtruck!")

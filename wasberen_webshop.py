@@ -1,5 +1,5 @@
 print("=" * 60)
-print("🦝 Hallo, welkom bij De Grote Wasberenwinkel! 🦝")
+print("Hallo, welkom bij De Grote Wasberenwinkel!")
 print("=" * 60)
 print()
 

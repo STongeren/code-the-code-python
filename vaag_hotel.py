@@ -1,5 +1,5 @@
 print("=" * 50)
-print("🏨 Welkom bij Het Vage Hotel 🏨")
+print("Welkom bij Het Vage Hotel")
 print("=" * 50)
 print()
 

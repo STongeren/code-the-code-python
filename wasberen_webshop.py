@@ -1,128 +1,131 @@
-print("=" * 60)
-print("Hallo, welkom bij De Grote Wasberenwinkel!")
-print("=" * 60)
-print()
 
-wasberen_aanbod = [
-    "baby wasbeer",
-    "rare wasbeer",
-    "oude wasbeer",
-    "vieze wasbeer",
-    "wasbeer met zonnebril",
-    "dansende wasbeer"
-]
+print("Hallo, welkom bij De Wasberenwinkel")
+print("")
 
-prijzen = {
-    "baby wasbeer": 25.99,
-    "rare wasbeer": 49.99,
-    "oude wasbeer": 15.99,
-    "vieze wasbeer": 10.99,
-    "wasbeer met zonnebril": 39.99,
-    "dansende wasbeer": 44.99
-}
+wasbeer1 = "Baby wasbeer"
+wasbeer2 = "Rare wasbeer"
+wasbeer3 = "Oude wasbeer"
+wasbeer4 = "Vieze wasbeer"
+wasbeer5 = "Wasbeer met zonnebril"
+wasbeer6 = "Dansende wasbeer"
 
-winkelwagen = []
+prijs1 = 25.99
+prijs2 = 49.99
+prijs3 = 15.99
+prijs4 = 10.99
+prijs5 = 39.99
+prijs6 = 44.99
 
-while True:
-    print("\n--- MENU ---")
+winkelwagen_wasbeer = []
+winkelwagen_prijs = []
+
+doorgaan = "ja"
+
+while doorgaan == "ja":
+    print("")
+    print("--- MENU ---")
     print("1. Bekijk ons aanbod")
     print("2. Koop een wasbeer")
     print("3. Bekijk winkelwagen")
-    print("4. Verwijder uit winkelwagen")
-    print("5. Afreken en stop")
-    print("6. BONUS: Sorteer wasberen alfabetisch")
-    print("7. BONUS: Tel hoe vaak een wasbeer is gekocht")
+    print("4. Afreken en stop")
+    print("")
     
-    keuze = input("\nMaak een keuze (1-7): ")
+    keuze = input("Maak een keuze (1-4): ")
     
     if keuze == "1":
-        print("\n--- ONS WASBEREN AANBOD ---")
-        for i, wasbeer in enumerate(wasberen_aanbod, 1):
-            print(f"{i}. {wasbeer.capitalize()} - €{prijzen[wasbeer]:.2f}")
+        print("")
+        print("ONZE WASBEREN")
+        print("1. " + wasbeer1 + " - €" + str(prijs1))
+        print("2. " + wasbeer2 + " - €" + str(prijs2))
+        print("3. " + wasbeer3 + " - €" + str(prijs3))
+        print("4. " + wasbeer4 + " - €" + str(prijs4))
+        print("5. " + wasbeer5 + " - €" + str(prijs5))
+        print("6. " + wasbeer6 + " - €" + str(prijs6))
     
     elif keuze == "2":
-        print("\n--- KOOP EEN WASBEER ---")
-        for i, wasbeer in enumerate(wasberen_aanbod, 1):
-            print(f"{i}. {wasbeer.capitalize()} - €{prijzen[wasbeer]:.2f}")
+        print("")
+        print("KOOP EEN WASBEER")
+        print("1. " + wasbeer1 + " - €" + str(prijs1))
+        print("2. " + wasbeer2 + " - €" + str(prijs2))
+        print("3. " + wasbeer3 + " - €" + str(prijs3))
+        print("4. " + wasbeer4 + " - €" + str(prijs4))
+        print("5. " + wasbeer5 + " - €" + str(prijs5))
+        print("6. " + wasbeer6 + " - €" + str(prijs6))
+        print("")
         
-        try:
-            nummer = int(input("\nKies een nummer (1-6): "))
-            if 1 <= nummer <= len(wasberen_aanbod):
-                gekozen_wasbeer = wasberen_aanbod[nummer - 1]
-                winkelwagen.append(gekozen_wasbeer)
-                print(f"{gekozen_wasbeer.capitalize()} is toegevoegd aan je winkelwagen!")
-            else:
-                print("Ongeldig nummer!")
-        except ValueError:
-            print("Voer een geldig nummer in!")
+        nummer = input("Kies een nummer (1-6): ")
+        
+        if nummer == "1":
+            winkelwagen_wasbeer.append(wasbeer1)
+            winkelwagen_prijs.append(prijs1)
+            print(wasbeer1 + " is toegevoegd aan je winkelwagen!")
+        elif nummer == "2":
+            winkelwagen_wasbeer.append(wasbeer2)
+            winkelwagen_prijs.append(prijs2)
+            print(wasbeer2 + " is toegevoegd aan je winkelwagen!")
+        elif nummer == "3":
+            winkelwagen_wasbeer.append(wasbeer3)
+            winkelwagen_prijs.append(prijs3)
+            print(wasbeer3 + " is toegevoegd aan je winkelwagen!")
+        elif nummer == "4":
+            winkelwagen_wasbeer.append(wasbeer4)
+            winkelwagen_prijs.append(prijs4)
+            print(wasbeer4 + " is toegevoegd aan je winkelwagen!")
+        elif nummer == "5":
+            winkelwagen_wasbeer.append(wasbeer5)
+            winkelwagen_prijs.append(prijs5)
+            print(wasbeer5 + " is toegevoegd aan je winkelwagen!")
+        elif nummer == "6":
+            winkelwagen_wasbeer.append(wasbeer6)
+            winkelwagen_prijs.append(prijs6)
+            print(wasbeer6 + " is toegevoegd aan je winkelwagen!")
+        else:
+            print("Ongeldig nummer!")
     
     elif keuze == "3":
-        print("\n--- JOUW WINKELWAGEN ---")
-        if len(winkelwagen) == 0:
+        print("")
+        print("JOUW WINKELWAGEN")
+        aantal_items = len(winkelwagen_wasbeer)
+        
+        if aantal_items == 0:
             print("Je winkelwagen is leeg.")
         else:
             totaal = 0
-            for i, wasbeer in enumerate(winkelwagen, 1):
-                prijs = prijzen[wasbeer]
-                print(f"{i}. {wasbeer.capitalize()} - €{prijs:.2f}")
-                totaal += prijs
-            print(f"\nSubtotaal: €{totaal:.2f}")
+            i = 0
+            while i < aantal_items:
+                print(str(i + 1) + ". " + winkelwagen_wasbeer[i] + " - €" + str(winkelwagen_prijs[i]))
+                totaal = totaal + winkelwagen_prijs[i]
+                i = i + 1
+            print("")
+            print("Subtotaal: €" + str(totaal))
     
     elif keuze == "4":
-        print("\n--- VERWIJDER UIT WINKELWAGEN ---")
-        if len(winkelwagen) == 0:
-            print("Je winkelwagen is leeg.")
-        else:
-            for i, wasbeer in enumerate(winkelwagen, 1):
-                print(f"{i}. {wasbeer.capitalize()}")
-            
-            try:
-                nummer = int(input("\nWelk item wil je verwijderen? (nummer): "))
-                if 1 <= nummer <= len(winkelwagen):
-                    verwijderd = winkelwagen.pop(nummer - 1)
-                    print(f"{verwijderd.capitalize()} is verwijderd uit je winkelwagen.")
-                else:
-                    print("Ongeldig nummer!")
-            except ValueError:
-                print("Voer een geldig nummer in!")
-    
-    elif keuze == "5":
-        print("\n" + "=" * 60)
+        print("")
         print("AFREKENEN")
-        print("=" * 60)
         
-        if len(winkelwagen) == 0:
+        aantal_items = len(winkelwagen_wasbeer)
+        
+        if aantal_items == 0:
             print("Je winkelwagen is leeg. Tot ziens!")
         else:
-            print("\n--- JOUW BESTELLING ---")
+            print("")
+            print("JOUW BESTELLING")
             totaal = 0
-            for wasbeer in winkelwagen:
-                prijs = prijzen[wasbeer]
-                print(f"• {wasbeer.capitalize()} - €{prijs:.2f}")
-                totaal += prijs
+            i = 0
+            while i < aantal_items:
+                print("• " + winkelwagen_wasbeer[i] + " - €" + str(winkelwagen_prijs[i]))
+                totaal = totaal + winkelwagen_prijs[i]
+                i = i + 1
             
-            print(f"\n--- TOTAAL: €{totaal:.2f} ---")
-            print(f"\nJe hebt {len(winkelwagen)} wasberen gekocht!")
-            print("\nBedankt voor je bestelling bij De Grote Wasberenwinkel!")
+            print("")
+            print("--- TOTAAL: €" + str(totaal) + " ---")
+            print("")
+            print("Je hebt " + str(aantal_items) + " wasberen gekocht!")
+            print("")
+            print("Bedankt voor je bestelling bij De Wasberenwinkel!")
         
-        break
-    
-    elif keuze == "6":
-        print("\n--- BONUS: GESORTEERDE WASBEREN (ALFABETISCH) ---")
-        gesorteerd = sorted(wasberen_aanbod)
-        for i, wasbeer in enumerate(gesorteerd, 1):
-            print(f"{i}. {wasbeer.capitalize()}")
-    
-    elif keuze == "7":
-        print("\n--- BONUS: AANTAL KEER GEKOCHT ---")
-        wasbeer_naam = input("Welke wasbeer wil je tellen? ").strip().lower()
-        
-        if wasbeer_naam in wasberen_aanbod:
-            aantal = winkelwagen.count(wasbeer_naam)
-            print(f"\n'{wasbeer_naam.capitalize()}' zit {aantal} keer in je winkelwagen.")
-        else:
-            print(f"'{wasbeer_naam}' staat niet in ons aanbod.")
+        doorgaan = "nee"
     
     else:
-        print("Ongeldige keuze. Kies tussen 1 en 7.")
+        print("Ongeldige keuze. Kies tussen 1 en 4.")
 

@@ -1,28 +1,37 @@
 
 
 print("Welkom bij DrerrieShoppa!")
+print("")
 
 print("Zonnezeil - Sterrenmotor")
+print("")
 
-print("Brandstofkosten: 1500 credits", end=" ")
-print("| Reserve: 500 credits")
+print("Brandstofkosten: 1500 credits")
+print("Reserve: 500 credits")
+print("")
 
 brandstofkosten = 1500
 reserve = 500
 totaal_brandstof = brandstofkosten + reserve
 
-
-print(f"\nBerekeningen met brandstofkosten ({brandstofkosten} credits):")
-print(f"Floor division (//): {totaal_brandstof} // 3 = {totaal_brandstof // 3}")
-print(f"Modulo (%): {totaal_brandstof} % 7 = {totaal_brandstof % 7}")
-print(f"Exponentiation (**): {brandstofkosten} ** 2 = {brandstofkosten ** 2}")
+print("Berekeningen met brandstofkosten:")
+print("Totaal brandstof: " + str(totaal_brandstof) + " credits")
+print("")
 
 
-octaal_serienummer = 0o12345  
-hex_serienummer = 0xABCDEF    
+deling = totaal_brandstof / 3
+print("Totaal gedeeld door 3: " + str(deling))
 
-print(f"\nSerienummers van ruimteschepen:")
-print(f"Zonnezeil serienummer (octaal): {octaal_serienummer} (octaal: {oct(octaal_serienummer)})")
-print(f"Sterrenmotor serienummer (hex): {hex_serienummer} (hex: {hex(hex_serienummer)})")
+vermenigvuldiging = brandstofkosten * 2
+print("Brandstofkosten keer 2: " + str(vermenigvuldiging))
+print("")
 
-print("\nBedankt voor uw bezoek aan RuimteShoppa!")
+zonnezeil_serienummer = 5349
+sterrenmotor_serienummer = 11259375
+
+print("Serienummers van ruimteschepen:")
+print("Zonnezeil serienummer: " + str(zonnezeil_serienummer))
+print("Sterrenmotor serienummer: " + str(sterrenmotor_serienummer))
+print("")
+
+print("Bedankt voor uw bezoek aan RuimteShoppa!")

@@ -2,7 +2,7 @@
 
 print("Welkom bij De Derrie Foodtruck!")
 
-print("\n=== ONZE GEREICHTEN ===")
+print("\nONZE GEREICHTEN")
 gerechten = [
     "1. Galactische Burger",
     "2. Ruimte-Taco's", 
@@ -16,7 +16,7 @@ for gerecht in gerechten:
     print(gerecht)
 
 
-print("\n=== EXTRA TOPPINGS ===")
+print("\nEXTRA TOPPINGS")
 toppings = [
     "1. Ruimte-Kaas",
     "2. Sterren-Avocado", 
@@ -31,7 +31,7 @@ toppings = [
 for topping in toppings:
     print(topping)
 
-print("\n=== DANKJES ===")
+print("\nDANKJES")
 drankjes = [
     "1. Galactische Limonade",
     "2. Sterren-Milkshake", 

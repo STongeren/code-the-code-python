@@ -27,10 +27,11 @@ while doorgaan == "ja":
     print("1. Bekijk ons aanbod")
     print("2. Koop een wasbeer")
     print("3. Bekijk winkelwagen")
-    print("4. Afreken en stop")
+    print("4. Verwijder uit winkelwagen")
+    print("5. Afreken en stop")
     print("")
     
-    keuze = input("Maak een keuze (1-4): ")
+    keuze = input("Maak een keuze (1-5): ")
     
     if keuze == "1":
         print("")
@@ -101,6 +102,30 @@ while doorgaan == "ja":
     
     elif keuze == "4":
         print("")
+        print("VERWIJDER UIT WINKELWAGEN")
+        aantal_items = len(winkelwagen_wasbeer)
+        
+        if aantal_items == 0:
+            print("Je winkelwagen is leeg.")
+        else:
+            i = 0
+            while i < aantal_items:
+                print(str(i + 1) + ". " + winkelwagen_wasbeer[i])
+                i = i + 1
+            print("")
+            
+            nummer = input("Welk item wil je verwijderen? (nummer): ")
+            nummer_int = int(nummer)
+            
+            if nummer_int >= 1 and nummer_int <= aantal_items:
+                verwijderde_wasbeer = winkelwagen_wasbeer.pop(nummer_int - 1)
+                winkelwagen_prijs.pop(nummer_int - 1)
+                print(verwijderde_wasbeer + " is verwijderd uit je winkelwagen.")
+            else:
+                print("Ongeldig nummer!")
+    
+    elif keuze == "5":
+        print("")
         print("AFREKENEN")
         
         aantal_items = len(winkelwagen_wasbeer)
@@ -127,5 +152,5 @@ while doorgaan == "ja":
         doorgaan = "nee"
     
     else:
-        print("Ongeldige keuze. Kies tussen 1 en 4.")
+        print("Ongeldige keuze. Kies tussen 1 en 5.")
 

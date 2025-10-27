@@ -6,8 +6,8 @@ print("")
 print("Zonnezeil - Sterrenmotor")
 print("")
 
-print("Brandstofkosten: 1500 credits")
-print("Reserve: 500 credits")
+print("Brandstofkosten: 1500 credits", end=" ")
+print("| Reserve: 500 credits")
 print("")
 
 brandstofkosten = 1500
@@ -18,20 +18,22 @@ print("Berekeningen met brandstofkosten:")
 print("Totaal brandstof: " + str(totaal_brandstof) + " credits")
 print("")
 
+floor_deling = totaal_brandstof // 3
+print("Floor division (//): " + str(totaal_brandstof) + " // 3 = " + str(floor_deling))
 
-deling = totaal_brandstof / 3
-print("Totaal gedeeld door 3: " + str(deling))
+modulo = totaal_brandstof % 7
+print("Modulo (%): " + str(totaal_brandstof) + " % 7 = " + str(modulo))
 
-vermenigvuldiging = brandstofkosten * 2
-print("Brandstofkosten keer 2: " + str(vermenigvuldiging))
+macht = brandstofkosten ** 2
+print("Exponentiation (**): " + str(brandstofkosten) + " ** 2 = " + str(macht))
 print("")
 
-zonnezeil_serienummer = 5349
-sterrenmotor_serienummer = 11259375
+octaal_serienummer = 0o12345
+hex_serienummer = 0xABCDEF
 
 print("Serienummers van ruimteschepen:")
-print("Zonnezeil serienummer: " + str(zonnezeil_serienummer))
-print("Sterrenmotor serienummer: " + str(sterrenmotor_serienummer))
+print("Zonnezeil serienummer (octaal): " + str(octaal_serienummer))
+print("Sterrenmotor serienummer (hex): " + str(hex_serienummer))
 print("")
 
 print("Bedankt voor uw bezoek aan RuimteShoppa!")
